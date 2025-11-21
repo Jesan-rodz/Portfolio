@@ -1,0 +1,249 @@
+/* -------------------- GLOBAL -------------------- */
+
+body { 
+    background: url("Images/Background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-family: Eina01;
+    scroll-behavior: smooth;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fuente */
+@font-face {
+    font-family: 'Eina01';
+    src: url(Fonts/Eina01-SemiBold.ttf) format('truetype');
+}
+
+/* -------------------- HEADER -------------------- */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+}
+
+/* -------------------- Botón lenguaje -------------------- */
+
+#lang-btn {
+  position: absolute;
+  top: 46px;
+  left: 142px;
+  background-color: rgba(85, 85, 85, 0);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#lang-btn:hover {
+    color: rgb(255, 86, 152);
+    background-color: #222;
+}
+
+/* -------------------- PROYECTOS -------------------- */
+
+.proyectos {
+    position: absolute;
+    left: 422px;
+    top: 35px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.proyectos:hover {
+    background-color: #222;
+    color: rgb(255, 86, 152);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* -------------------- CONTACTO -------------------- */
+
+.contact {
+    position: absolute;
+    right: 437px;
+    top: 35px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.contact:hover {
+    background-color: #222;
+    color: rgb(255, 86, 152);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* -------------------- BOTÓN IMG -------------------- */
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.img-button {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    height: 98.8597px;
+    width: 87.2708px;
+    animation: pulse 5s infinite;
+}
+
+.img-button img {
+    height: 100%;
+    width: 100%;
+}
+
+.img-button:hover img {
+    content: url('Images/BW.png');
+}
+
+/* -------------------- TITULO SECCIÓN -------------------- */
+
+.about-section-title {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 50px;
+}
+
+.about-section-title h2 {
+    color: rgb(255, 86, 152);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.about-section-title h2 p{
+    font-size:28px;
+}
+/* -------------------- SOBRE MI -------------------- */
+
+.sobre-mi {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding: 25px;
+  margin: 25px;
+}
+
+.sobre-mi .foto {
+  width: 250px;
+  border-radius: 60px;
+  margin-left: 130px;
+}
+
+.sobre-mi .texto {
+  margin-right: 130px;
+  flex: 1;
+}
+
+.sobre-mi .texto h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+/* -------------------- DOS COLUMNAS -------------------- */
+
+.contenedor-dos-columnas {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.columna-izquierda,
+.columna-derecha {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 450px;
+}
+
+/* -------------------- BLOQUES CENTRADOS -------------------- */
+
+/* Logros centrado */
+.columna-izquierda > .bloque-logros {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* -------------------- ESTILO DE TODOS LOS BLOQUES -------------------- */
+
+.bloque-educacion,
+.bloque-experiencia,
+.bloque-logros,
+.bloque-mision,
+.bloque-vision,
+.bloque-habilidades,
+.bloque-programas,
+.bloque-idiomas {
+    background-color: #222;
+    color: white;
+    padding: 35px 40px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(255, 86, 152, 0.55);
+}
+
+.bloque-educacion h2,
+.bloque-experiencia h2,
+.bloque-logros h2,
+.bloque-mision h2,
+.bloque-vision h2,
+.bloque-habilidades h2,
+.bloque-programas h2,
+.bloque-idiomas h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* -------------------- LISTAS -------------------- */
+
+.bloque-habilidades li,
+.bloque-programas li,
+.bloque-idiomas li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left; /* letras alineadas a la izquierda */
+}
+
+/* -------------------- BLOQUE IDIOMAS INDEPENDIENTE CENTRADO -------------------- */
+.bloque-idiomas {
+    width: 400px;   /* ancho fijo deseado */
+    margin: 0 auto; /* centrado horizontal */
+}
+
+/* -------------------- FOOTER -------------------- */
+
+footer {
+    margin-top: 20px;
+    color: white;
+    padding: 10px;
+}

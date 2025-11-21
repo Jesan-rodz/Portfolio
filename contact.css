@@ -1,0 +1,209 @@
+/* -------------------- GLOBAL -------------------- */
+body { 
+    background: url("Images/Background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-family: Eina01;
+    scroll-behavior: smooth;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fuente */
+@font-face {
+    font-family: 'Eina01';
+    src: url(Fonts/Eina01-SemiBold.ttf) format('truetype');
+}
+
+/* -------------------- Boton de lenguaje -------------------- */
+#lang-btn {
+    position: absolute;
+    top: 46px;
+    left: 142px;
+    background-color: rgba(85, 85, 85, 0);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#lang-btn:hover {
+    color: rgb(255, 86, 152);
+    background-color: #222;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+}
+
+.proyectos {
+    position: absolute;
+    left: 382px;
+    top: 35px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.proyectos:hover {
+    background-color: #222;
+    color: rgb(255, 86, 152);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+
+.contact {
+    position: absolute;
+    right: 392px;
+    top: 35px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+.contact:hover {
+    background-color: #222;
+    color: rgb(255, 86, 152);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* -------------------- BOTÓN IMG -------------------- */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+.img-button {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    height: 98.8597px;
+    width: 87.2708px;
+    animation: pulse 5s infinite;
+    text-decoration: none;
+}
+.img-button img {
+    height: 100%;
+    width: 100%;
+}
+.img-button:hover img {
+    content: url('Images/BW.png');
+}
+
+/* -------------------- MAIN -------------------- */
+main {
+    flex: 1;
+}
+
+.contacto-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 65px 25px 20px;
+  background-color: rgba(17, 17, 17, 0);
+}
+.titulo-contacto h1 {
+  font-size: 40px;
+  color: #ff5698;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.intro-contact {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+    padding: 20px 10px;
+}
+.intro-contact p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #1b1b1b;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 86, 152, 0.52);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-form label {
+  text-align: left;
+  font-weight: bold;
+  font-size: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  outline: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #444;
+}
+.send-btn {
+  padding: 12px;
+  background-color: rgb(255, 86, 152);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.send-btn:hover {
+  background-color: #6b8cff;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    color: white;
+    padding: 10px;
+}
