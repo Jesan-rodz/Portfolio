@@ -1,0 +1,347 @@
+/* -------------------- GLOBAL -------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: eina01;
+}
+
+body {
+    background: url("Images/Background.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Fuente */
+@font-face {
+    font-family: "Eina01";
+    src: url("Fonts/Eina01-SemiBold.ttf") format("truetype");
+}
+
+/* -------------------- BOTON DE LENGUAJE -------------------- */
+#lang-btn {
+    position: absolute;
+    top: 40px;
+    left: 142px;
+    background-color: rgba(85, 85, 85, 0);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#lang-btn:hover {
+    color: rgb(255, 86, 152);
+    background-color: #222;
+}
+
+/* -------------------- TITULO SECCIÓN -------------------- */
+
+.about-section-title {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 50px;
+}
+
+.about-section-title h2 {
+    color: rgb(255, 86, 152);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.about-section-title h2 p{
+    font-size:28px;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 45px;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* -------------------- LINKS DEL HEADER -------------------- */
+.about {
+    position: absolute;
+    left: 450px;
+    top: 35px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+
+.about:hover {
+    background-color: #222;
+    color: rgb(255, 86, 152);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.contact {
+    position: absolute;
+    right: 400px;
+    top: 35px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s ease;
+    z-index: 2;
+}
+
+.contact:hover {
+    background-color: #222;
+    color: rgb(255, 86, 152);
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+/* -------------------- BOTÓN IMG -------------------- */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.img-button {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    height: 98px;
+    width: 87px;
+    animation: pulse 5s infinite;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.img-button img {
+    height: 100%;
+    width: 100%;
+}
+
+.img-button:hover img {
+    content: url("Images/BW.png");
+}
+
+/* -------------------- WRAPPER & GRID -------------------- */
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* -------------------- CARDS -------------------- */
+.card {
+    height: 300px;
+    width: 250px;
+    border-radius: 2rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8);
+    transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+    position: relative;
+}
+
+.card > .row {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s ease 0.3s;
+    padding: 10px;
+}
+
+.description h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.description p {
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #222;
+    color: rgb(255, 86, 152);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input:checked + label .description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+    margin: 75px;
+}
+
+.project-card {
+    background: rgba(26, 26, 26, 0);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 86, 152, 0.5);
+}
+
+.project-card img {
+    width: 100%;
+    display: block;
+}
+
+.project-card h3 {
+    padding: 15px 20px 5px 20px;
+    font-size: 1.3rem;
+    color: rgb(255, 86, 152);
+}
+
+.project-card p {
+    padding: 0 20px 15px 20px;
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgb(255, 86, 152);
+}
+
+/* -------------------- MODAL FULLSCREEN -------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(255, 86, 152);
+    transition: transform 0.3s ease;
+}
+
+.modal-caption {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.modal-caption h2 {
+    font-size: 2rem;
+    color: rgb(255, 86, 152);
+    margin-bottom: 10px;
+}
+
+.modal-caption p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: rgb(255, 86, 152);
+}
+
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}

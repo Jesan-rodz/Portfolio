@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="jesan.css" />
+</head>
+<body>
+    <!-- Botón de idioma -->
+    <button id="lang-btn">ES</button>
+
+    <!-- Botón de la mano derecha (inicio) -->
+    <a href="index.html" class="img-button" id="home-link">
+        <img src="Images/WB.png" alt="Botón Inicio" />
+    </a>
+
+    <main>
+        <div class="special-container">
+            <img src="Images/webs-04.png" alt="Imagen Especial" class="special-img" />
+            <p id="special-text" class="special-text">
+                Veo que has encontrado la página oculta… No muchos llegan hasta aquí. Prepárate: la nueva sección de
+                redes sociales está en camino. Muy pronto estará disponible.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p id="footer-text">© 2025 JESAN. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Variables
+            const langBtn = document.getElementById("lang-btn");
+            const specialText = document.getElementById("special-text");
+            const footerText = document.getElementById("footer-text");
+            const homeLink = document.getElementById("home-link");
+
+            const texts = {
+                ES: {
+                    special:
+                        "Veo que has encontrado la página oculta… No muchos llegan hasta aquí. Prepárate: la nueva sección de redes sociales está en camino. Muy pronto estará disponible.",
+                    footer: "© 2025 JESAN. Todos los derechos reservados.",
+                    homeAlt: "Botón Inicio"
+                },
+                EN: {
+                    special:
+                        "I see you’ve found the hidden page… Not many get this far. Get ready: the new social media section is on its way. Coming very soon.",
+                    footer: "© 2025 JESAN. All rights reserved.",
+                    homeAlt: "Home Button"
+                },
+                FR: {
+                    special:
+                        "Je vois que vous avez trouvé la page cachée… Peu de gens vont aussi loin. Préparez-vous : la nouvelle section des réseaux sociaux arrive bientôt.",
+                    footer: "© 2025 JESAN. Tous droits réservés.",
+                    homeAlt: "Bouton Accueil"
+                }
+            };
+
+            let currentLang = "ES";
+
+            // Botón de idioma funcional
+            langBtn.addEventListener("click", () => {
+                if (currentLang === "ES") currentLang = "EN";
+                else if (currentLang === "EN") currentLang = "FR";
+                else currentLang = "ES";
+
+                specialText.textContent = texts[currentLang].special;
+                footerText.textContent = texts[currentLang].footer;
+                homeLink.querySelector("img").alt = texts[currentLang].homeAlt;
+                langBtn.textContent = currentLang;
+            });
+
+            // Fade-in al cargar
+            document.body.style.opacity = 0;
+            setTimeout(() => {
+                document.body.style.transition = "opacity 5s";
+                document.body.style.opacity = 1;
+            }, 10);
+        });
+    </script>
+</body>
+</html>

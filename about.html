@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="about.css" />
+    <title>ABOUT</title>
+</head>
+
+<body>
+<header>
+    <button id="lang-btn">ES</button>
+    <a href="projectos.html" id="proyectos-link" class="proyectos">PROYECTOS</a>
+    <h1 id="header-title">SOBRE</h1>
+    <a href="contact.html" id="contact-link" class="contact">CONTACTO</a>
+    <a href="index.html" class="img-button">
+        <img src="Images/WB.png" alt="button" />
+    </a>
+</header>
+
+<main>
+    <!-- TÍTULO PRINCIPAL -->
+    <div class="about-section-title">
+        <h2 id="about-title">Sobre mí</h2>
+        <p id="about-subtitle">Descubre mi mundo de creatividad, innovación y pasión visual.</p>
+    </div>
+
+    <!-- FOTO + TEXTO -->
+    <section class="sobre-mi">
+        <img src="Portfolio/jesan%20autoretrato.png" class="foto" alt="Foto personal" />
+        <div class="texto">
+            <h2 id="name">Jerry E. Sánchez Rodríguez</h2>
+            <p id="bio">
+                Diseñador gráfico con experiencia, práctica en Fotografía y Edición de fotos, Diseño web básico
+                (código y maquetación), Preparación de archivos para impresión y medios digitales, Branding,
+                Ilustración, Animación 2D y Diseño de piezas publicitarias. Especializado en producción y
+                postproducción de contenido visual.
+            </p>
+        </div>
+    </section>
+
+    <!-- DOS COLUMNAS -->
+    <section class="contenedor-dos-columnas">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="columna-izquierda">
+            <div class="bloque-mision">
+                <h2 id="mision-title">Misión</h2>
+                <p id="mision-text">
+                    Desarrollo contenido visual mediante el branding, la ilustración, la animación 2D y la
+                    fotografía, aplicando conocimientos técnicos en diseño web, composición y preparación de
+                    archivos para impresión y medios digitales. Creación de piezas visuales que comunican con
+                    claridad, mantengan coherencia estética y fortalezcan la identidad de cada proyecto.
+                </p>
+            </div>
+
+            <div class="bloque-educacion">
+                <h2 id="educacion-title">Educación</h2>
+                <p id="educacion-text">
+                    <strong>2020 - Actualidad</strong><br />
+                    Universidad de Puerto Rico - Bachillerato en artes con concentración en Tecnologías de la
+                    Comunicación (Diseño Gráfico)
+                </p>
+            </div>
+
+            <div class="bloque-experiencia">
+                <h2 id="experiencia-title">Experiencia</h2>
+                <p id="experiencia-text">
+                    <strong>Enero 2025 – Mayo 2025</strong><br />
+                    Comité de Promoción, Arte y Publicidad 18vo Festival de Imagen y Sonido. <br />
+                    Desarrollo de piezas promocionales para talleres de animación y memoria visual: Animación en
+                    los 80s (Taller #5), Una mirada al pasado (Taller #6).
+                </p>
+            </div>
+
+            <div class="bloque-logros">
+                <h2 id="logros-title">Logros</h2>
+                <p id="logros-text">
+                    <strong>Abril 2023</strong><br />
+                    Mención Honorífica: Retrato en vectores, 17º Festival de Imagen y Sonido.
+                </p>
+            </div>
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="columna-derecha">
+            <div class="bloque-vision">
+                <h2 id="vision-title">Visión</h2>
+                <p id="vision-text">
+                    Convertirme en un diseñador gráfico reconocido por la creación de identidades visuales
+                    sólidas, innovadoras y coherentes, capaces de generar impacto y valor en distintos medios.
+                    Aspiro a desarrollar proyectos que integren diseño, tecnología y comunicación visual,
+                    contribuyendo al crecimiento y posicionamiento de marcas en entornos digitales e impresos.
+                </p>
+            </div>
+
+            <div class="bloque-habilidades">
+                <h2 id="habilidades-title">Habilidades</h2>
+                <ul id="habilidades-list">
+                    <li>Creativo</li>
+                    <li>Proactivo</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Computadoras: Windows / Mac</li>
+                    <li>Tabletas: Android / iOS</li>
+                    <li>Cámara digital: Canon</li>
+                </ul>
+            </div>
+
+            <div class="bloque-programas">
+                <h2 id="programas-title">Programas</h2>
+                <ul id="programas-lista">
+                    <li>Brackets</li>
+                    <li>Figma</li>
+                    <li>OBS Studio</li>
+                    <li>OpenShot</li>
+                    <li>Sketchbook</li>
+                    <li>Phoenix Code</li>
+                    <li>Microsoft Office: Word, PowerPoint</li>
+                    <li>Adobe Suite: Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, Lightroom</li>
+                    <li>Procreate</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUE IDIOMAS INDEPENDIENTE -->
+    <div class="bloque-idiomas">
+        <h2 id="idiomas-title">Idiomas</h2>
+        <ul>
+            <li id="idioma-es">Español — Nativo</li>
+            <li id="idioma-en">Inglés — Intermedio</li>
+            <li id="idioma-fr">Francés — Básico</li>
+            <li id="idioma-ssi">Lenguaje de señas (SSI) — Básico</li>
+        </ul>
+    </div>
+</main>
+
+<footer id="footer-text">© 2025 JESAN. Todos los derechos reservados.</footer>
+
+<script>
+const langBtn = document.getElementById('lang-btn');
+const languages = ['es','en','fr'];
+let currentLangIndex = 0;
+
+const texts = {
+    es: {
+        headerTitle:"SOBRE",
+        proyectosLink:"PROYECTOS",
+        contactLink:"CONTACTO",
+        aboutTitle:"Sobre mí",
+        aboutSubtitle:"Descubre mi mundo de creatividad, innovación y pasión visual.",
+        name:"Jerry E. Sánchez Rodríguez",
+        bio:"Diseñador gráfico con experiencia, práctica en Fotografía y Edición de fotos, Diseño web básico (código y maquetación), Preparación de archivos para impresión y medios digitales, Branding, Ilustración, Animación 2D y Diseño de piezas publicitarias. Especializado en producción y postproducción de contenido visual.",
+        misionTitle:"Misión",
+        misionText:"Desarrollo contenido visual mediante el branding, la ilustración, la animación 2D y la fotografía, aplicando conocimientos técnicos en diseño web, composición y preparación de archivos para impresión y medios digitales. Creación de piezas visuales que comunican con claridad, mantengan coherencia estética y fortalezcan la identidad de cada proyecto.",
+        educacionTitle:"Educación",
+        educacionText:"2020 - Actualidad<br>Universidad de Puerto Rico - Bachillerato en artes con concentración en Tecnologías de la Comunicación (Diseño Gráfico)",
+        experienciaTitle:"Experiencia",
+        experienciaText:"Enero 2025 – Mayo 2025<br>Comité de Promoción, Arte y Publicidad 18vo Festival de Imagen y Sonido. Desarrollo de piezas promocionales para talleres de animación y memoria visual: Animación en los 80s (Taller #5), Una mirada al pasado (Taller #6).",
+        logrosTitle:"Logros",
+        logrosText:"Abril 2023<br>Mención Honorífica: Retrato en vectores, 17º Festival de Imagen y Sonido.",
+        visionTitle:"Visión",
+        visionText:"Convertirme en un diseñador gráfico reconocido por la creación de identidades visuales sólidas, innovadoras y coherentes, capaces de generar impacto y valor en distintos medios. Aspiro a desarrollar proyectos que integren diseño, tecnología y comunicación visual, contribuyendo al crecimiento y posicionamiento de marcas en entornos digitales e impresos.",
+        habilidadesTitle:"Habilidades",
+        habilidadesList:["Creativo","Proactivo","Trabajo en equipo","Computadoras: Windows / Mac","Tabletas: Android / iOS","Cámara digital: Canon"],
+        programasTitle:"Programas",
+        programasList:["Brackets","Figma","OBS Studio","OpenShot","Sketchbook","Phoenix Code","Microsoft Office: Word, PowerPoint","Adobe Suite: Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, Lightroom","Procreate"],
+        idiomasTitle:"Idiomas",
+        idioma_es:"Español — Nativo",
+        idioma_en:"Inglés — Intermedio",
+        idioma_fr:"Francés — Básico",
+        idioma_ssi:"Lenguaje de señas (SSI) — Básico",
+        footer:"© 2025 JESAN. Todos los derechos reservados."
+    },
+    en: {
+        headerTitle:"ABOUT",
+        proyectosLink:"PROJECTS",
+        contactLink:"CONTACT",
+        aboutTitle:"About Me",
+        aboutSubtitle:"Discover my world of creativity, innovation, and visual passion.",
+        name:"Jerry E. Sánchez Rodríguez",
+        bio:"Graphic designer with experience in photography and photo editing, basic web design (coding and layout), preparation of files for print and digital media, branding, illustration, 2D animation, and design of advertising pieces. Specialized in production and post-production of visual content.",
+        misionTitle:"Mission",
+        misionText:"I develop visual content through branding, illustration, 2D animation, and photography, applying technical knowledge in web design, composition, and preparation of files for print and digital media. I create visual pieces that communicate clearly, maintain aesthetic consistency, and strengthen the identity of each project.",
+        educacionTitle:"Education",
+        educacionText:"2020 - Present<br>University of Puerto Rico - Bachelor of Arts with a concentration in Communication Technologies (Graphic Design)",
+        experienciaTitle:"Experience",
+        experienciaText:"January 2025 – May 2025<br>Promotion, Art, and Advertising Committee 18th Festival of Image and Sound. Development of promotional pieces for animation workshops and visual memory: Animation in the 80s (Workshop #5), A Look into the Past (Workshop #6).",
+        logrosTitle:"Achievements",
+        logrosText:"April 2023<br>Honorable Mention: Vector Portrait, 17th Festival of Image and Sound.",
+        visionTitle:"Vision",
+        visionText:"To become a graphic designer recognized for creating strong, innovative, and coherent visual identities capable of generating impact and value across different media. I aspire to develop projects that integrate design, technology, and visual communication, contributing to the growth and positioning of brands in digital and print environments.",
+        habilidadesTitle:"Skills",
+        habilidadesList:["Creative","Proactive","Teamwork","Computers: Windows / Mac","Tablets: Android / iOS","Digital Camera: Canon"],
+        programasTitle:"Software",
+        programasList:["Brackets","Figma","OBS Studio","OpenShot","Sketchbook","Phoenix Code","Microsoft Office: Word, PowerPoint","Adobe Suite: Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, Lightroom","Procreate"],
+        idiomasTitle:"Languages",
+        idioma_es:"Spanish — Native",
+        idioma_en:"English — Intermediate",
+        idioma_fr:"French — Basic",
+        idioma_ssi:"Sign Language (SSI) — Basic",
+        footer:"© 2025 JESAN. All rights reserved."
+    },
+    fr: {
+        headerTitle:"À PROPOS",
+        proyectosLink:"PROJETS",
+        contactLink:"CONTACT",
+        aboutTitle:"À propos de moi",
+        aboutSubtitle:"Découvrez mon univers de créativité, d'innovation et de passion visuelle.",
+        name:"Jerry E. Sánchez Rodríguez",
+        bio:"Designer graphique avec expérience, pratique en photographie et retouche photo, conception web de base (codage et mise en page), préparation de fichiers pour impression et médias numériques, branding, illustration, animation 2D et conception de pièces publicitaires. Spécialisé dans la production et la post-production de contenu visuel.",
+        misionTitle:"Mission",
+        misionText:"Je développe du contenu visuel à travers le branding, l'illustration, l'animation 2D et la photographie, en appliquant des connaissances techniques en conception web, composition et préparation de fichiers pour l'impression et les médias numériques. Je crée des pièces visuelles qui communiquent clairement, maintiennent la cohérence esthétique et renforcent l'identité de chaque projet.",
+        educacionTitle:"Éducation",
+        educacionText:"2020 - Présent<br>Université de Porto Rico - Baccalauréat en arts avec concentration en Technologies de la Communication (Design Graphique)",
+        experienciaTitle:"Expérience",
+        experienciaText:"Janvier 2025 – Mai 2025<br>Comité de Promotion, Art et Publicité 18e Festival de l'Image et du Son. Développement de pièces promotionnelles pour des ateliers d'animation et de mémoire visuelle : Animation dans les années 80 (Atelier #5), Un regard sur le passé (Atelier #6).",
+        logrosTitle:"Réalisations",
+        logrosText:"Avril 2023<br>Mention honorable : Portrait vectoriel, 17e Festival de l'image et du son.",
+        visionTitle:"Vision",
+        visionText:"Devenir un designer graphique reconnu pour créer des identités visuelles solides, innovantes et cohérentes capables de générer un impact et de la valeur sur différents supports. Je souhaite développer des projets intégrant le design, la technologie et la communication visuelle, contribuant à la croissance et au positionnement des marques dans les environnements numériques et imprimés.",
+        habilidadesTitle:"Compétences",
+        habilidadesList:["Créatif","Proactif","Travail d'équipe","Ordinateurs : Windows / Mac","Tablettes : Android / iOS","Appareil photo numérique : Canon"],
+        programasTitle:"Logiciels",
+        programasList:["Brackets","Figma","OBS Studio","OpenShot","Sketchbook","Phoenix Code","Microsoft Office : Word, PowerPoint","Adobe Suite: Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, Lightroom","Procreate"],
+        idiomasTitle:"Langues",
+        idioma_es:"Espagnol — Natif",
+        idioma_en:"Anglais — Intermédiaire",
+        idioma_fr:"Français — Débutant",
+        idioma_ssi:"Langue des signes (SSI) — Débutant",
+        footer:"© 2025 JESAN. Tous les droits réservés."
+    }
+};
+
+// Función para actualizar la página y el botón
+function updateLanguage() {
+    const lang = languages[currentLangIndex];
+    const current = texts[lang];
+
+    // Actualizar texto del botón al idioma actual
+    langBtn.textContent = lang.toUpperCase();
+
+    // MENÚ
+    document.getElementById('header-title').textContent = current.headerTitle;
+    document.getElementById('proyectos-link').textContent = current.proyectosLink;
+    document.getElementById('contact-link').textContent = current.contactLink;
+
+    // SECCIONES
+    document.getElementById('about-title').textContent = current.aboutTitle;
+    document.getElementById('about-subtitle').innerHTML = current.aboutSubtitle;
+    document.getElementById('name').textContent = current.name;
+    document.getElementById('bio').textContent = current.bio;
+    document.getElementById('mision-title').textContent = current.misionTitle;
+    document.getElementById('mision-text').textContent = current.misionText;
+    document.getElementById('educacion-title').textContent = current.educacionTitle;
+    document.getElementById('educacion-text').innerHTML = current.educacionText;
+    document.getElementById('experiencia-title').textContent = current.experienciaTitle;
+    document.getElementById('experiencia-text').innerHTML = current.experienciaText;
+    document.getElementById('logros-title').textContent = current.logrosTitle;
+    document.getElementById('logros-text').innerHTML = current.logrosText;
+    document.getElementById('vision-title').textContent = current.visionTitle;
+    document.getElementById('vision-text').textContent = current.visionText;
+
+    // HABILIDADES Y PROGRAMAS
+    document.getElementById('habilidades-title').textContent = current.habilidadesTitle;
+    const habilidadesUl = document.getElementById('habilidades-list');
+    habilidadesUl.innerHTML = "";
+    current.habilidadesList.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        habilidadesUl.appendChild(li);
+    });
+
+    document.getElementById('programas-title').textContent = current.programasTitle;
+    const programasUl = document.getElementById('programas-lista');
+    programasUl.innerHTML = "";
+    current.programasList.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        programasUl.appendChild(li);
+    });
+
+    // IDIOMAS
+    document.getElementById('idiomas-title').textContent = current.idiomasTitle;
+    document.getElementById('idioma-es').textContent = current.idioma_es;
+    document.getElementById('idioma-en').textContent = current.idioma_en;
+    document.getElementById('idioma-fr').textContent = current.idioma_fr;
+    document.getElementById('idioma-ssi').textContent = current.idioma_ssi;
+
+    // FOOTER
+    document.getElementById('footer-text').textContent = current.footer;
+}
+
+// Inicializar el idioma al cargar la página
+updateLanguage();
+
+// Cambiar idioma al hacer clic
+langBtn.addEventListener('click', () => {
+    currentLangIndex = (currentLangIndex + 1) % languages.length;
+    updateLanguage();
+});
+    // Fade-in al cargar
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.opacity = 0;
+    setTimeout(() => {
+        document.body.style.transition = "opacity 5s";
+        document.body.style.opacity = 1;
+    }, 10);
+});
+</script>
+</body>
+</html>
